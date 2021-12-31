@@ -1,0 +1,24 @@
+{
+  "name": "voluntryactivity",
+  "version": "1.0.0",
+  "description": "the open-souce homework in 2021 thr end day",
+  "main": "VoluntryActivity.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "git repository": "https://github.com/guoguomeimei/VoluntryActivity",
+  
+  "keywords": [
+    "voluntryActivity",
+    "web",
+    "nodejs",
+    "mongodb",
+    "login"
+  ],
+  "author": "gmay",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/guoguomeimei/finalwork3/issues"
+  },
+  "homepage": "https://github.com/guoguomeimei/finalwork3#readme"
+}
