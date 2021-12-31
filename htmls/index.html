@@ -1,0 +1,154 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" import="web.gm.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+<script src="bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
+<script src="bootstrap-4.4.1-dist/popper.min.js"></script>
+<script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+</head>
+<body>
+
+<div>
+<div id="carouselExampleCaptions" class="carousel slide rounded mx-auto d-block" data-ride="carousel" >
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" >
+    <div class="carousel-item active" style="height: 400px;">
+      <img src="photo/6.jpg" class="img-fluid" alt="...">
+      
+    </div>
+    <div class="carousel-item" style="height: 400px;">
+      <img src="photo/4.jpg" class="img-fluid" alt="...">
+      
+    </div>
+    <div class="carousel-item"style="height: 400px;">
+      <img src="photo/5.jpg" class="img-fluid" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions"  data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions"  data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+	<div class="col-13">
+	<%@ include file="top.jsp" %>
+	</div>
+
+
+	<div class="col-lg-13">
+
+	<div class="album py-5 bg-light">
+    <div class="container">
+
+	<div>
+	<div class="p-3 mb-2 bg-danger text-white">传递大爱，你我同行</div>
+	<div class="p-3 mb-2 bg-transparent text-dark">往届志愿者活动成功举办：</div>  
+	</div>
+      <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="photo/7.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">为空巢老人送温暖</h5>
+      <p class="card-text">小小志愿者们为老年人做家务，按摩捶背</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="photo/8.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">为老年人定时体检</h5>
+      <p class="card-text">如图所示，我们的一个志愿者免费为老年人们抽血进行定时的身体检查</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="photo/9.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">组织小朋友们参观景区</h5>
+      <p class="card-text">志愿者们在景区的门口接待组团来参观游览的小学生们，防止走散，并疏通交通</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+</div>
+<div class="p-3 mb-2 bg-transparent text-dark"></div>
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="photo/10.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">组织新冠疫苗接种</h5>
+      <p class="card-text">我们的志愿者们去到社区里为那些老年人组织接种新冠疫苗相关事宜</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="photo/11.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">社区志愿者</h5>
+      <p class="card-text">疫情期间，我们进出社区都需要志愿者帮助我们进行体温检测，和是否佩戴口罩的检查，保障了我们的安全</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="photo/14.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">清明节祭扫活动</h5>
+      <p class="card-text">志愿者们有组织的进入烈士陵园进行清明节祭扫活动</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+</div>
+<div class="p-3 mb-2 bg-transparent text-dark"></div>
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="photo/15.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">捡拾垃圾，文明道路</h5>
+      <p class="card-text">志愿者们在杭州市各个道路对道路两旁的花坛进行清理</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="photo/16.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">3.12植树节</h5>
+      <p class="card-text">志愿者们在公园里进行植树活动，美化公园，美化地球，更美化世界</p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="photo/1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">更多志愿活动请点击下方按钮了解详情</h5>
+      <p class="card-text"></p>
+      <p class="card-text"><small class="text-muted">详情点击>></small></p>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<footer class="text-muted p-3 mb-2 bg-danger">
+  <div class="container  text-white">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>190110910506   19计算机2班  郭梅</p>
+    <p>web开发课2021/6月答辩专用</p>
+  </div>
+</footer>
+</html>
+			

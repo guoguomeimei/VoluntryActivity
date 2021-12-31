@@ -1,0 +1,72 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+<script src="bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
+<script src="bootstrap-4.4.1-dist/popper.min.js"></script>
+<script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+</head>
+<body>
+
+	<div class="container">
+
+
+		<div class="row" style="margin-top: 10px">
+			<%@ include file="top.jsp"%>
+
+
+			<div class="col-lg-13">
+
+
+				<div class="card">
+					<div class="card-header">用户注册</div>
+					<div class="card-body">
+						<div>
+							<h2>用户注册成功，注册信息如下：</h2>
+							<div class="row">
+								<div class="col-lg-6">
+									<p>用户名：${username}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>性别：${sex}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>密码：${password}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>身份证号：${cardid}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>职业：${major}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>身份：${identity}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>出生年月：${birth}</p>
+								</div>
+								<div class="col-lg-6">
+									<p>社会组织：${group}</p>
+								</div>
+							</div>
+							<div class="card-header">郭梅，专业：计算机科学与技术，学号：190110910506  班级：19计算机2 </div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>

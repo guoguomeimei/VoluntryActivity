@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="col-lg-13">
+		<!-- 导航栏 -->
+		<%@ include file="top.jsp"%>
+
+	
+			
+				<div class="card-header">所有活动列表</div>
+				<table class="table">
+					<thead class="thead-light">
+						<tr>
+							<th scope="col">序号</th>
+							<th scope="col">活动序号</th>
+							<th scope="col">活动名</th>
+							<th scope="col">活动内容</th>
+							<th scope="col">主办方</th>
+							<th scope="col">报名开始时间</th>
+							<th scope="col">报名结束时间</th>
+							<th scope="col">举办时间</th>
+							<th scope="col">活动地址</th>
+							<th scope="col">余量</th>
+							<th scope="col">报名</th>
+						</tr>
+					</thead>
+					<tbody>
+				
+					<c:forEach items="${activityList}" var="user" varStatus="i">
+					
+						<tr>
+							<th scope="row">${i.count}</th>
+							<td>${user.id}</td>
+							<td>${user.name}</td>
+							<td>${user.content}</td>
+							<td>${user.host}</td>
+							<td>${user.starttime}</td>
+							<td>${user.endtime}</td>
+							<td>${user.time}</td>
+							<td>${user.address}</td>
+							<td>${user.capcityCn}</td>
+							
+							<td>
+						
+							<c:if test="${user.username!=null}">
+						   <a type="button" class="btn btn-danger" href="CancelApplyServlet?name=${user.name}">取消报名</a></c:if>
+						   <c:if test="${user.username==null}">
+						    <a type="button" class="btn btn-primary" href="BtnApplyServlet?name=${user.name}">报名</a></c:if>
+						
+						</td>
+							
+						
+							
+						
+						</tr>
+						</c:forEach>
+						
+						 
+						
+					</tbody>
+				</table>
+
+				
+
+			</div>
+</body>
+</html>
