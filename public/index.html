@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/bootstrap/login.css">
-    <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+  <script src="bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
+  <script src="bootstrap-4.4.1-dist/popper.min.js"></script>
+  <script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
 
-<div action='/'>
+<div action='/index'>
 <div id="carouselExampleCaptions" class="carousel slide rounded mx-auto d-block" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -40,7 +42,59 @@
   </button>
 </div>
 	<div class="col-13">
-	<%@ include file="top.jsp" %>
+
+    <nav class="navbar navbar-expand-lg  bg-danger" >
+      <a class="navbar-brand" href="#">志愿服务</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="/index">首页 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/activity">志愿活动</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="volorganic.html">志愿活动组织</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link text-white" href="ApplyActivityServlet">活动报名信息</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link text-white" href="UserActivityServlet">个人活动报名信息</a>
+          </li>
+         
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
+        <li class="nav-item">
+            <a class="nav-link text-white " href="/login" tabindex="-1" aria-disabled="true">登陆</a>
+          </li>
+         
+           <li class="nav-item">
+            <a class="nav-link text-white" href="/reg" tabindex="-1" aria-disabled="true">注册</a>
+          </li>
+          </ul>
+        
+        </div>
+        
+      </div>
+       <a
+                class="nav-link dropdown-toggle" href="login.html" id="navbarDropdown"
+                role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"> ${username==null?"未登录":username}</a>
+                <c:if test="${username!=null}">
+                </c:if>
+                
+    </nav>
+    
 	</div>
 
 
@@ -145,7 +199,7 @@
       <a href="#">Back to top</a>
     </p>
     <p>190110910506   19计算机2班  郭梅</p>
-    <p>web开发课2021/6月答辩专用</p>
+    <p>开元软件课程作业</p>
   </div>
 </footer>
 </html>

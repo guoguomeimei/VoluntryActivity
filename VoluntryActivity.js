@@ -15,7 +15,7 @@ const schema1={
     major:String,
     identity:String
 }
-// const user=mongoose.model('t_user',schema1);
+const user=mongoose.model('t_user',schema1);
 //数据库中即使一些列属性不存在仍然不影响存储
 // const user1 = new user({id:9,username:'GGGGGG',password:'12345678', sex:'male',birth:'1980-01-01 00:00:00', organ:'', cardid:'', major:'学生'});
 // user1.save();
@@ -28,7 +28,7 @@ const schema2={
     account:Number,//number替换
     situation:Number  //status替换
 }
-// const apply=mongoose.model('t_apply',schema2);
+const apply=mongoose.model('t_apply',schema2);
 // const apply1 = new apply({id:1, activityname:'杭州亚运会志愿者招募', username:'GGGGGG', regtime:'2021-06-23 13:24:58', account:1, situation:'1'});
 // apply1.save();
 
@@ -44,13 +44,14 @@ const schema3={
     capcity:{type:Number,require:true},
     host:{type:String,require:true}
 }
-// const activity=mongoose.model('t_activity',schema3);
+const activity=mongoose.model('t_activity',schema3);
 //注意require没用，即使许多；标注了非空也没有约束作用
 // const activity1= new activity({ name:'杭州亚运会志愿者招募', content:'杭州亚运会运动会场馆检测口罩和体温', starttime:'2021-06-23 13:24:58',endtime:'2021-06-23 13:24:58', time:"",address:"浙江财经大学东操场", capcity:100,host:"浙江志愿者协会"});
 // activity1.save();
 mongoose.connection.on('conndcted',()=>{
     console.log('mongodb ok')
 })
+
 app.use('/',express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended:false})); 
@@ -60,7 +61,20 @@ app.use(express.urlencoded({extended:false}));
 // //model名.find({查询条件}，callback(err,查询结果)=>{}) 
 // var i=0;
 // app.use('/',express.static('public'))
-// app.get("/BtCount",(req,res)=>{i++;res.send(i.toString())})
+app.get("/index",(req,res,next)=>{
+    console.log(req);
+    res.send('主页')
+})
+app.use("/activity",(req,res,next)=>{
+    ejs.renderFile('public/htmls/volactivity.html',function(err, str){
+        // str => 输出渲染后的 HTML 字符串
+        if(err){console.log(err)}
+        else{
+            res.setHeader('Content-Type', 'text/html');
+            res.end(str)
+        }
+    });
+})
 
 
 
@@ -292,14 +306,7 @@ app.use(express.urlencoded({extended:false}));
 			
 // 		}
 		
-// 	}
-// 	/*
-// 	 * 增加已报名数量，当用户报名时活动表操作
-// 	 */
-// 	public static void increaseCapcity(String activityname) {
-// 		Connection conn = UserService.getConnection();
-
-// 		QueryRunner qr = new QueryRunner();
+// 	}么他和哦qr = new QueryRunner();
 // 		String sql = "UPDATE t_activity SET capcity=capcity+1 where activityname=?";
 // 		try {
 // 			qr.update(conn, sql, activityname);
