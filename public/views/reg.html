@@ -1,21 +1,62 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
-<!-- bootstrap -->
+<title>Insert title he</title>
 <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
-<script src="bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
-<script src="bootstrap-4.4.1-dist/popper.min.js"></script>
-<script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+  <script src="bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
+  <script src="bootstrap-4.4.1-dist/popper.min.js"></script>
+  <script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+  <link rel="icon" href="favicon.ico">
 </head>
-<body>
-
-	<div class="container">
-		<!-- 导航栏 -->
-		<%@ include file="top.jsp"%>
+<body>		
+	<nav class="navbar navbar-expand-lg  bg-danger" >
+		<a class="navbar-brand" href="#">志愿服务</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item active">
+			  <a class="nav-link text-white" href="/index">首页 <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link text-white" href="/activity">志愿活动</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link text-white" href="/volorganic">志愿活动组织</a>
+			</li>
+			 <li class="nav-item">
+			  <a class="nav-link text-white" href="/applyActivity">活动报名信息</a>
+			</li>
+			 <li class="nav-item">
+			  <a class="nav-link text-white" href="/userActivity">个人活动报名信息</a>
+			</li>
+		   
+		  </ul>
+		  <form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		  </form>
+		  <div class="form-inline my-2 my-lg-0">
+		  <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
+		  <li class="nav-item">
+			  <a class="nav-link text-white " href="/loginhtml" ,tabindex="-1" aria-disabled="true">登陆</a>
+			</li>
+		   
+			 <li class="nav-item">
+			  <a class="nav-link text-white" href="/reghtml" tabindex="-1" aria-disabled="true">注册</a>
+			</li>
+			</ul>
+		  
+		  </div>
+		  
+		</div>
+  
+				  
+	  </nav>
+	  
 
 		<div class="row" style="margin-top: 10px">
 			
@@ -28,9 +69,7 @@
 					<div class="card-header">用户注册</div>
 					<div class="card-body">
 
-						<p style="color: red">${info}</p>
-
-						<form method="post" action="AddActivity" enctype="multipart/form-data">
+						<form method="get" action="/reg" name="logForm" onsubmit="return validateForm()" enctype="multipart/form-data" action='/reg'>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-3 col-form-label">用户名</label>
 								<div class="col-sm-6">
@@ -66,7 +105,7 @@
 								<label for="inputPassword3" class="col-sm-3 col-form-label">出生日期</label>
 								<div class="col-sm-9">
 									<input type="date" name="birth" class="form-control"
-										id="inputPassword3" placeholder="生日" value="1980-01-01">
+										id="inputPassword3" placeholder="生日" value="2001-01-01">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -87,8 +126,6 @@
 							<div class="form-group row">
 								<label for="inputPassword3" class="col-sm-3 col-form-label">职业</label>
 								<div class="col-sm-9">
-
-
 									<select class="form-control" name="major">
 										<option value="学生">学生</option>
 										<option value="公务员">公务员</option>
@@ -123,10 +160,35 @@
 								</div>
 							</div>
 						</form>
+						
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<script>
+			function validateForm() {
+				
+				if(logForm.username.value==""){
+					alert("用户名不能为空");
+					return false;
+				}
+				if(logForm.password.value==""){
+					alert("密码不能为空");
+					return false;
+				}
+				if(logForm.group.value==""){
+					alert("所在组织不能为空");
+					return false;
+				}
+				if(logForm.cardid.value==""){
+					alert("身份证号不能为空");
+					return false;
+				}
+				if(logForm.identity.value==""){
+					alert("身份信息不能为空");
+					return false;
+				}
+			}
+		</script>
 </body>
 </html>

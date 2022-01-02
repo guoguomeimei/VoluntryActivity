@@ -12,7 +12,7 @@
 
 <body>
 
-<div action='/index'>
+<div action='/'>
 <div id="carouselExampleCaptions" class="carousel slide rounded mx-auto d-block" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -58,13 +58,13 @@
             <a class="nav-link text-white" href="/activity">志愿活动</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="volorganic.html">志愿活动组织</a>
+            <a class="nav-link text-white" href="/volorganic">志愿活动组织</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link text-white" href="ApplyActivityServlet">活动报名信息</a>
+            <a class="nav-link text-white" href="/applyActivity">活动报名信息</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link text-white" href="UserActivityServlet">个人活动报名信息</a>
+            <a class="nav-link text-white" href="/userActivity">个人活动报名信息</a>
           </li>
          
         </ul>
@@ -75,23 +75,18 @@
         <div class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
         <li class="nav-item">
-            <a class="nav-link text-white " href="/login" tabindex="-1" aria-disabled="true">登陆</a>
+            <a class="nav-link text-white " href="/loginhtml" ,tabindex="-1" aria-disabled="true">登陆</a>
           </li>
          
            <li class="nav-item">
-            <a class="nav-link text-white" href="/reg" tabindex="-1" aria-disabled="true">注册</a>
+            <a class="nav-link text-white" href="/reghtml" tabindex="-1" aria-disabled="true">注册</a>
           </li>
           </ul>
         
         </div>
         
       </div>
-       <a
-                class="nav-link dropdown-toggle" href="login.html" id="navbarDropdown"
-                role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false"> ${username==null?"未登录":username}</a>
-                <c:if test="${username!=null}">
-                </c:if>
+
                 
     </nav>
     
